@@ -1,145 +1,170 @@
-<!doctype html>
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooxen 拓科生工作室</title>
 
-    <head>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Tooxen Studio 提供專業網頁設計、手機應用、程式設計、系統開發、技術諮詢與專案管理服務。">
+  <meta name="keywords" content="Tooxen, 網頁設計, 手機應用, 程式設計, 系統開發, 技術諮詢, 專案管理">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tooxen 拓科生工作室">
+  <meta property="og:description" content="專注於客製化前端、後端及完整系統開發的創意工程團隊。">
+  <meta property="og:image" content="https://tooxen.app/images/og-image.png">
+  <meta property="og:url" content="https://tooxen.app">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tooxen 拓科生工作室">
+  <meta name="twitter:description" content="專注於客製化前端、後端及完整系統開發的創意工程團隊。">
+  <meta name="twitter:image" content="https://tooxen.app/images/og-image.png">
 
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tooxen Studio">
 
-        <title>拓科生有限公司｜Tooxen llc</title>
-        <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Noto Sans TC', sans-serif; overflow-x: hidden; }
+    nav.navbar { position: fixed; top: 0; width: 100%; background: #5492D5; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+    nav.navbar .logo { color: #EEF0D8; font-size: 1.5rem; font-weight: bold; }
+    nav.navbar ul { list-style: none; display: flex; gap: 2rem; }
+    nav.navbar a { text-decoration: none; color: #EEF0D8; font-weight: 700; }
 
-        <!-- The compiled CSS file -->
-        <link rel="stylesheet" href="css/production.css">
+    section { width: 100%; height: 100vh; padding: 6rem 2rem 4rem; display: flex; align-items: center; justify-content: center; }
 
-        <!-- Web fonts -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Source+Serif+Pro:700" rel="stylesheet">  -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-        <!-- favicon.ico. Place these in the root directory. -->
-        <link rel="shortcut icon" href="favicon.ico">
+    /* Hero */
+    .hero { background: #5492D5; color: #EEF0D8; flex-direction: column; }
+    .hero-content { display: flex; align-items: center; justify-content: space-between; max-width: 1000px; width: 100%; }
+    .hero-text { flex: 1; display: flex; flex-direction: column; gap: 2rem; }
+    .hero-text h1 { font-size: 3rem; }
+    .hero-sub { display: flex; align-items: center; gap: 1rem; }
+    .hero-sub img { width: 80px; }
+    .hero-sub h2 { font-size: 2rem; line-height: 1.2; }
+    .hero-image { flex: 1; text-align: center; }
+    .hero-image img { width: 300px; max-width: 50vw; }
 
-    </head>
+    /* About */
+    .about { background: #EEF0D8; color: #333; flex-direction: row; }
+    .about .images, .about .text { flex: 1; min-width: 280px; }
+    .about .images img { width: 260px; margin: 0 auto; display: block; }
+    .about .text { padding: 0 1rem; line-height: 1.6; }
+    .about h2 { font-size: 2rem; color: #5492D5; margin-bottom: 1rem; }
 
-    <body class="has-animations">
+    /* Services */
+    .services { background: #5492D5; color: #EEF0D8; flex-direction: column; }
+    .services h2 { font-size: 2rem; margin-bottom: 2rem; }
+    .services .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 1000px; width: 100%; margin: 0 auto; padding: 0 1rem; }
+    .services .card { background: #FBE675; color: #333; padding: 2rem; border-radius: 8px; display: flex; flex-direction: column; align-items: center; transition: transform 0.3s; }
+    .services .card:hover { transform: scale(1.05); }
+    .services .card img { width: 64px; margin-bottom: 1rem; }
+    .services .card span { font-weight: 700; font-size: 1.1rem; text-align: center; }
 
+    /* Cases */
+    .cases { background: #EEF0D8; color: #333; flex-direction: column; }
+    .cases h2 { font-size: 2rem; color: #5492D5; margin-bottom: 2rem; }
+    .cases .carousel { position: relative; max-width: 80vw; width: 100%; margin: 0 auto; overflow: hidden; }
+    .cases .banners { display: flex; gap: 1rem; padding: 0 1rem; overflow-x: auto; scroll-behavior: smooth; }
+    .cases .banner { position: relative; flex: 0 0 48%; height: 300px; border-radius: 8px; overflow: hidden; }
+    .cases .banner img { width: 100%; height: 100%; object-fit: cover; }
+    .cases .banner .caption { position: absolute; bottom: 1rem; left: 1rem; background: rgba(0,0,0,0.5); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; font-size: 1rem; }
+    .cases .arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 2rem; color: #5492D5; background: rgba(255,255,255,0.8); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 5; }
+    .cases .arrow.left { left: 1rem; }
+    .cases .arrow.right { right: 1rem; }
 
-    <!-- Header -->
-    <header class="align--center pt3">
-        <div class="container--lg border--bottom pb3">
-            <img class="logo mb3 reveal-on-scroll is-revealing" src="img/logo.svg" alt="Carta">
-            <h2>拓科生有限公司</h2>
+    /* Contact with watermark */
+    .contact { background: #5492D5; color: #EEF0D8; flex-direction: row; position: relative; }
+    .contact .image, .contact .info { flex: 1; min-width: 280px; }
+    .contact .image img { width: 200px; display: block; margin: 0 auto; }
+    .contact .info { position: relative; padding: 1rem; line-height: 1.6; }
+    .contact .info h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .contact .info p { margin-bottom: 0.5rem; }
+    .contact .info .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.1; width: 200px; pointer-events: none; }
+
+    @media (max-width: 768px) {
+      section { padding: 4rem 1rem; height: auto; }
+      .about, .contact { flex-direction: column; }
+      .services .grid { grid-template-columns: 1fr; padding: 0 1rem; gap: 1rem; width: 100%; }
+      .services .card { width: 100%; margin-bottom: 1rem; flex: none; }
+      .cases .banners { flex-direction: column; padding: 0; }
+      .cases .banner { width: 100%; margin-bottom: 1rem; }
+      .contact .info .watermark { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Tooxen</div>
+    <ul>
+      <li><a href="#about">關於我們</a></li>
+      <li><a href="#services">服務項目</a></li>
+      <li><a href="#cases">案例分享</a></li>
+      <li><a href="#contact">聯絡我們</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>WELCOME</h1>
+        <div class="hero-sub">
+          <img src="images/logo.png" alt="Tooxen Logo">
+          <h2>拓科生工作室<br>Tooxen Studio</h2>
         </div>
-    </header>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-mascot.png" alt="tooxen 吉祥物">
+      </div>
+    </div>
+  </section>
 
-    <main>
+  <section class="about" id="about">
+    <div class="images"><img src="images/mascot-group.png" alt="mascot 群像"></div>
+    <div class="text">
+      <h2>關於我們</h2>
+      <p>我們是來自高雄的一群創意工程師，熱愛將複雜的技術轉化為直覺、美觀又實用的數位體驗。從 UI/UX 設計、網站與系統開發，到雲端整合與維運，我們提供一站式客製化解決方案，協助客戶從概念發想到成功上線。專業扎根高雄，服務不限地域，讓您的創意跨越疆界、精彩實現！</p>
+    </div>
+  </section>
 
-        <!-- Feature list -->
-        <div class="container pt3 mt2 text--gray align--center">
-            <h2 class="mb3">服務項目</h2>
-            <div class="grid-row">
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_website_setup_5hr2.svg" alt="Assign to others">
-                    <p>網頁設計</p>
-                </div>
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_progressive_app_m9ms.svg" alt="Stay connected">
-                    <p>手機應用端設計</p>
-                </div>
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_respond_8wjt.svg" alt="Powerful search">
-                    <p>技術諮詢</p>
-                </div>
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_programming_2svr.svg" alt="Put in a vault">
-                    <p>程式設計</p>
-                </div>
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_design_components_9vy6.svg" alt="Fast messaging">
-                    <p>系統開發</p>
-                </div>
-                <div class="grid-column span-one-third mb3 reveal-on-scroll is-revealing">
-                    <img class="illustration--small mb1" src="img/undraw_scrum_board_cesn.svg" alt="Share with others">
-                    <p>專案管理</p>
-                </div>
-            </div>
-        </div>
+  <section class="services" id="services">
+    <h2>服務項目</h2>
+    <div class="grid">
+      <div class="card"><img src="images/web-design.png" alt="網頁設計"><span>網頁設計</span></div>
+      <div class="card"><img src="images/mobile-app.png" alt="手機應用"><span>手機應用</span></div>
+      <div class="card"><img src="images/programming.png" alt="程式設計"><span>程式設計</span></div>
+      <div class="card"><img src="images/system-dev.png" alt="系統開發"><span>系統開發</span></div>
+      <div class="card"><img src="images/consulting.png" alt="技術諮詢"><span>技術諮詢</span></div>
+      <div class="card"><img src="images/project-mgmt.png" alt="專案管理"><span>專案管理</span></div>
+    </div>
+  </section>
 
-        <!-- Focus -->
-        <div class="container--lg pt1 pb1">
+  <section class="cases" id="cases">
+    <h2>案例分享</h2>
+    <div class="carousel">
+      <div class="banners">
+        <div class="banner"><img src="images/case-iot.png" alt="IOT app"><div class="caption">IOT app</div></div>
+        <div class="banner"><img src="images/case-music.png" alt="音樂 app"><div class="caption">音樂 app</div></div>
+        <div class="banner"><img src="images/case-service.png" alt="居家服務 app"><div class="caption">居家服務 app</div></div>
+        <div class="banner"><img src="images/case-ticket.png" alt="售票 app"><div class="caption">售票 app</div></div>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid-row grid-row--center">
-                <div class="grid-column mt3 mb2 order-2">
-                    <div class="border--bottom pb2 mb2">
-                        <h2>關於我們</h2>
-                        <p>我們是一群高雄在地從業者，從事著電子商務、行銷、技術顧問、設計顧問等公司。我們有豐富的經驗，在UI/UX設計、網頁設計、手機應用程式等。</p>
-                    </div>
-                    <p class="italic text--gray mb1">我們相信著，一個人走得快但一群人才走得久。</p>
-                    <!-- <p class="bold">Carry Andersen, COO at&nbsp;Stripe</p> -->
-                </div>
-                <div class="grid-column span-1"></div>
-                <div class="grid-column mt3 mb2 order-1 reveal-on-scroll is-revealing">
-                    <img src="img/undraw_team_ih79.svg" alt="Usage data">
-                </div>
-            </div>
-
-            <div class="grid-row grid-row--center">
-                <div class="grid-column mt3 mb2 reveal-on-scroll is-revealing">
-                    <img src="img/undraw_product_photography_91i2.svg" alt="Absolute security">
-                </div>
-                <div class="grid-column span-1"></div>
-                <div class="grid-column mt3 mb2">
-                    <div class="border--bottom pb2 mb2">
-                        <h2>產品</h2>
-                        <!-- <p>Itaque his sapiens semper vacabit. Qualis ista philosophia est, quae non interitum afferat pravitatis, sed sit contenta mediocritate vitiorum? Quid de Platone aut de Democrito loquar? Quis istud possit, inquit&nbsp;negare?</p> -->
-                    </div>
-                    <!-- <p class="italic text--gray mb1">Estne, quaeso, inquam, sitienti in bibendo voluptas? Duo Reges: constructio&nbsp;interrete.</p> -->
-                    <!-- <p class="bold">Josh Blenton, Product Manager at&nbsp;Blinkist</p> -->
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Mentioned -->
-        <!-- <div class="container--lg pt3 pb3 mb2 align--center">
-            <p class="mb2">Mentioned in</p>
-            <span><img class="mentioned" src="img/mentioned.svg" alt="New York Times, TC, Product Hunt, Recode"></span>
-        </div> -->
-
-        <!-- CTA -->
-        <div class="bg--dark-gray align--center pt3 pb3">
-            <div class="container pt2 pb2">
-                <img class="cta-image mb2 reveal-on-scroll is-revealing" src="img/undraw_mail_2_tqip.svg" alt="Text the app">
-                <p class="h3 text--white mb1 bold">聯絡我們 Contact Us</p>
-                <p class="text--white mb3">tooxen.llc@gmail.com</p>
-                <!-- <div class="inline-block mr1 no-mr-on-mobile" style="width:280px;max-width:100%">
-                    <input class="form-control" type="tel" placeholder="Phone number">
-                </div>
-                <button class="btn btn--secondary">Send</button> -->
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="pt1 pb3 align--center-on-mobile">
-        <div class="container">
-            <!-- <div class="grid-row"> -->
-                <!-- <div class="grid-column mt2 span-half"> -->
-                    <p class="small">&copy 2020 拓科生有限公司</p>
-                    <p class="small">Design by <a href="https://www.papayatemplates.com" class="link link--text">Papaya</a>. Illustrations from <a href="https://undraw.co/" class="link link--text">Undraw</a>.</p>
-                <!-- </div> -->
-            <!-- </div> -->
-        </div>
-    </footer>
-
-    <!-- Scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-    <!-- The compiled JavaScript file -->
-    <script src="js/production.js"></script>
-
-    </body>
+  <section class="contact" id="contact">
+    <div class="image"><img src="images/contact-mascot.png" alt="聯絡吉祥物"></div>
+    <div class="info">
+      <h2>聯絡我們</h2>
+      <p><strong>拓科生工作室</strong></p>
+      <p>tooxen studio</p>
+      <p>service@tooxen.app</p>
+      <img src="images/logo.png" class="watermark" alt="浮水印">
+    </div>
+  </section>
+</body>
 </html>
-
