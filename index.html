@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,91 +26,24 @@
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
   <!-- Fonts & Bootstrap -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    :root{
-      --tx-blue:#5492D5;
-      --tx-yellow:#FBE675;
-      --tx-ivory:#EEF0D8;
-      --tx-dark:#333333;
-    }
-    html, body { font-family: 'Noto Sans TC', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif; }
-    body { padding-top: 72px; } /* for fixed navbar */
-
-    /* Navbar */
-    .navbar { background: var(--tx-blue); }
-    .navbar .nav-link, .navbar-brand { color: var(--tx-ivory) !important; font-weight: 700; }
-    .navbar .nav-link:hover { opacity: .9; }
-
-    /* Sections */
-    section { padding: 72px 0; }
-    .bg-tx-blue{ background: var(--tx-blue); }
-    .bg-tx-ivory{ background: var(--tx-ivory); }
-    .tx-ivory{ color: var(--tx-ivory); }
-    .tx-dark{ color: var(--tx-dark); }
-
-    /* Hero */
-    .hero-title{ font-size: clamp(2rem, 4vw, 3rem); }
-    .hero-sub{ font-size: clamp(1.25rem, 2.5vw, 2rem); }
-    .hero-logo{ width: clamp(56px, 8vw, 96px); }
-
-    /* Services */
-    .service-card{
-      background: var(--tx-yellow);
-      border: none;
-      border-radius: 12px;
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .service-card:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px rgba(0,0,0,.08);
-    }
-    .service-icon{ width: 64px; height: 64px; object-fit: contain; }
-
-    /* Cases */
-    .case-caption{
-      position: absolute; left: 1rem; bottom: 1rem;
-      background: rgba(0,0,0,.55); color: #fff;
-      padding: .35rem .75rem; border-radius: .5rem; font-size: .95rem;
-    }
-    .carousel-item .row > [class*="col"] { margin-bottom: 1rem; }
-
-    /* Contact & Watermark */
-    .contact-card{
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 16px;
-      backdrop-filter: blur(2px);
-    }
-    .watermark-wrap{ position: relative; }
-    .watermark{
-      position: absolute; inset: 0;
-      display: grid; place-items: center;
-      opacity: .1; pointer-events: none;
-    }
-    .watermark img{ width: 200px; max-width: 45vw; }
-    @media (max-width: 767.98px){
-      .watermark{ display: none; }
-    }
-
-    /* Utilities */
-    .rounded-12{ border-radius: 12px; }
-    .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">Tooxen</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="切換導覽">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      <a class="navbar-brand fw-bold fs-4" href="#home">Tooxen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="切換導覽">
+        <span class="navbar-toggler-icon" style="filter: brightness(0) invert(1);"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto gap-lg-3">
+        <ul class="navbar-nav ms-auto gap-lg-4 fw-bold">
           <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">服務項目</a></li>
           <li class="nav-item"><a class="nav-link" href="#cases">案例分享</a></li>
@@ -122,16 +56,20 @@
   <!-- Hero -->
   <section class="bg-tx-blue text-white" id="home">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <h1 class="hero-title fw-bold mb-3">WELCOME</h1>
-          <div class="d-flex align-items-center gap-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="hero-title fw-bold mb-4">WELCOME</h1>
+          <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4">
             <img src="images/logo.png" alt="Tooxen Logo" class="hero-logo">
-            <h2 class="hero-sub fw-bold mb-0">拓科生工作室<br class="d-none d-md-block">Tooxen Studio</h2>
+            <h2 class="hero-sub fw-bold mb-0">拓科生工作室<br>Tooxen Studio</h2>
           </div>
         </div>
-        <div class="col-lg-6 text-center">
-          <img src="images/hero-mascot.png" class="img-fluid" alt="tooxen 吉祥物" style="max-height: 360px;">
+        <div class="col-lg-5 text-center mt-5 mt-lg-0">
+          <div class="hero-img-wrapper">
+            <div class="hero-mascot-container">
+              <img src="images/mascot-hero.png" class="img-fluid hero-mascot-img" alt="tooxen 吉祥物">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -140,15 +78,17 @@
   <!-- About -->
   <section class="bg-tx-ivory tx-dark" id="about">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-md-6 text-center">
-          <img src="images/mascot-group.png" class="img-fluid rounded-12 shadow-soft" alt="mascot 群像" style="max-width: 420px;">
+      <div class="row align-items-center g-5 fade-up-element">
+        <div class="col-lg-6 text-center">
+          <img src="images/mascot-group.png" class="img-fluid" alt="mascot 群像"
+            style="width: 85%;">
         </div>
-        <div class="col-md-6">
-          <h2 class="fw-bold text-primary" style="color: var(--tx-blue)!important;">關於我們</h2>
-          <p class="mt-3 mb-0">
+        <div class="col-lg-6">
+          <h2 class="fw-bold display-5 mb-4" style="color: var(--tx-blue)!important;">關於我們</h2>
+          <p class="fs-5 lh-lg mb-0 text-secondary">
             我們是來自高雄的一群創意工程師，熱愛將複雜的技術轉化為直覺、美觀又實用的數位體驗。
-            從 UI/UX 設計、網站與系統開發，到雲端整合與維運，我們提供一站式客製化解決方案，
+            從 <strong class="text-dark">UI/UX 設計</strong>、<strong
+              class="text-dark">網站與系統開發</strong>，到雲端整合與維運，我們提供一站式客製化解決方案，
             協助客戶從概念發想到成功上線。專業扎根高雄，服務不限地域，讓您的創意跨越疆界、精彩實現！
           </p>
         </div>
@@ -159,108 +99,102 @@
   <!-- Services -->
   <section class="bg-tx-blue tx-ivory" id="services">
     <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">服務項目</h2>
+      <div class="text-center mb-5 fade-up-element">
+        <h2 class="fw-bold display-5">服務項目</h2>
       </div>
       <div class="row g-4">
         <!-- 3 cols on lg / 2 on md / 1 on sm -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/web-design.png" class="service-icon mx-auto mb-3" alt="網頁設計">
-            <div class="fw-bold">網頁設計</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-100">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-web.png" class="service-icon mx-auto" alt="網頁設計">
+            <div class="service-card-title">網頁設計</div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/mobile-app.png" class="service-icon mx-auto mb-3" alt="手機應用">
-            <div class="fw-bold">手機應用</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-200">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-app.png" class="service-icon mx-auto" alt="手機應用">
+            <div class="service-card-title">手機應用</div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/programming.png" class="service-icon mx-auto mb-3" alt="程式設計">
-            <div class="fw-bold">程式設計</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-300">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-programing.png" class="service-icon mx-auto" alt="程式設計">
+            <div class="service-card-title">程式設計</div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/system-dev.png" class="service-icon mx-auto mb-3" alt="系統開發">
-            <div class="fw-bold">系統開發</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-100">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-develop.png" class="service-icon mx-auto" alt="系統開發">
+            <div class="service-card-title">系統開發</div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/consulting.png" class="service-icon mx-auto mb-3" alt="技術諮詢">
-            <div class="fw-bold">技術諮詢</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-200">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-tech.png" class="service-icon mx-auto" alt="技術諮詢">
+            <div class="service-card-title">技術諮詢</div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center p-4">
-            <img src="images/project-mgmt.png" class="service-icon mx-auto mb-3" alt="專案管理">
-            <div class="fw-bold">專案管理</div>
+        <div class="col-6 col-md-6 col-lg-4 fade-up-element delay-300">
+          <div class="card service-card h-100 text-center">
+            <img src="images/services-management.png" class="service-icon mx-auto" alt="專案管理">
+            <div class="service-card-title">專案管理</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cases (Bootstrap Carousel with 2 cards per slide on md+, 1 on sm) -->
+  <!-- Cases -->
   <section class="bg-tx-ivory tx-dark" id="cases">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h2 class="fw-bold" style="color: var(--tx-blue);">案例分享</h2>
-        <!-- 只是示意的左右箭頭控制 -->
-        <div class="d-none d-md-flex gap-2">
-          <button class="btn btn-outline-primary btn-sm" data-bs-target="#casesCarousel" data-bs-slide="prev">‹</button>
-          <button class="btn btn-outline-primary btn-sm" data-bs-target="#casesCarousel" data-bs-slide="next">›</button>
+    <div class="container fade-up-element">
+      <div class="d-flex align-items-center justify-content-between mb-5">
+        <h2 class="fw-bold display-5 mb-0" style="color: var(--tx-blue);">案例分享</h2>
+        <!-- 桌面與平板版的自訂控制按鈕 -->
+        <div class="d-none d-md-flex gap-3">
+          <button class="custom-carousel-btn" data-bs-target="#casesCarousel" data-bs-slide="prev"
+            aria-label="上一張">‹</button>
+          <button class="custom-carousel-btn" data-bs-target="#casesCarousel" data-bs-slide="next"
+            aria-label="下一張">›</button>
         </div>
       </div>
 
-      <div id="casesCarousel" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner">
+      <div id="casesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner pb-4">
           <!-- Slide 1 -->
           <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="position-relative rounded-12 overflow-hidden shadow-soft">
-                  <img src="images/case-iot.png" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="IOT app">
-                  <span class="case-caption">IOT app</span>
-                </div>
+            <div class="carousel-item-wrapper">
+              <div class="case-card">
+                <img src="images/case-iot.png" alt="IOT app">
+                <span class="case-caption">IOT app</span>
               </div>
-              <div class="col-md-6">
-                <div class="position-relative rounded-12 overflow-hidden shadow-soft">
-                  <img src="images/case-music.png" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="音樂 app">
-                  <span class="case-caption">音樂 app</span>
-                </div>
+              <div class="case-card">
+                <img src="images/case-music.png" alt="音樂 app">
+                <span class="case-caption">音樂 app</span>
               </div>
             </div>
           </div>
           <!-- Slide 2 -->
           <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="position-relative rounded-12 overflow-hidden shadow-soft">
-                  <img src="images/case-service.png" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="居家服務 app">
-                  <span class="case-caption">居家服務 app</span>
-                </div>
+            <div class="carousel-item-wrapper">
+              <div class="case-card">
+                <img src="images/case-service.png" alt="居家服務 app">
+                <span class="case-caption">居家服務 app</span>
               </div>
-              <div class="col-md-6">
-                <div class="position-relative rounded-12 overflow-hidden shadow-soft">
-                  <img src="images/case-ticket.png" class="w-100" style="aspect-ratio: 16/9; object-fit: cover;" alt="售票 app">
-                  <span class="case-caption">售票 app</span>
-                </div>
+              <div class="case-card">
+                <img src="images/case-ticket.png" alt="售票 app">
+                <span class="case-caption">售票 app</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Mobile controls -->
-        <button class="carousel-control-prev d-md-none" type="button" data-bs-target="#casesCarousel" data-bs-slide="prev" aria-label="上一張">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next d-md-none" type="button" data-bs-target="#casesCarousel" data-bs-slide="next" aria-label="下一張">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <div class="d-flex justify-content-center gap-4 mt-2 d-md-none">
+          <button class="custom-carousel-btn" data-bs-target="#casesCarousel" data-bs-slide="prev"
+            aria-label="上一張">‹</button>
+          <button class="custom-carousel-btn" data-bs-target="#casesCarousel" data-bs-slide="next"
+            aria-label="下一張">›</button>
+        </div>
       </div>
     </div>
   </section>
@@ -268,19 +202,27 @@
   <!-- Contact -->
   <section class="bg-tx-blue text-white" id="contact">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-5 text-center">
-          <img src="images/contact-mascot.png" class="img-fluid" alt="聯絡吉祥物" style="max-height: 260px;">
+      <div class="row align-items-center g-5 fade-up-element">
+        <div class="col-lg-5 text-center order-2 order-lg-1 mt-5 mt-lg-0">
+          <div class="contact-img-wrapper">
+            <img src="images/mascot-email.png" class="img-fluid" alt="聯絡吉祥物" style="width: 75%;">
+          </div>
         </div>
-        <div class="col-lg-7">
-          <div class="contact-card p-4 p-md-5 watermark-wrap">
+        <div class="col-lg-7 order-1 order-lg-2">
+          <div class="contact-card p-5">
             <div class="watermark">
               <img src="images/logo.png" alt="浮水印">
             </div>
-            <h2 class="fw-bold mb-3">聯絡我們</h2>
-            <p class="mb-1"><strong>拓科生工作室</strong></p>
-            <p class="mb-1">tooxen studio</p>
-            <p class="mb-0">service@tooxen.app</p>
+            <div class="position-relative z-1">
+              <h2 class="fw-bold display-5 mb-4">聯絡我們</h2>
+              <div class="fs-4 mb-2 fw-bold">拓科生工作室</div>
+              <div class="fs-5 mb-4 text-white-50">tooxen studio</div>
+              <a href="mailto:service@tooxen.app"
+                class="btn btn-light btn-lg rounded-pill fw-bold px-4 py-3 text-primary shadow-sm hover-lift"
+                style="transition: transform 0.3s;">
+                service@tooxen.app
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -288,13 +230,11 @@
   </section>
 
   <footer class="py-4 bg-white text-center">
-    <small class="text-muted">© <span id="y"></span> Tooxen Studio. All rights reserved.</small>
+    <small class="text-secondary fw-bold">© <span id="y"></span> Tooxen Studio. All rights reserved.</small>
   </footer>
 
-  <script>
-    // 年份自動更新
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
