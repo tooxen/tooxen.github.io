@@ -50,3 +50,60 @@ navLinks.forEach((l) => {
     }
   });
 });
+
+
+// 複製 Email 功能
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+
+function fallbackCopyTextToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  
+  // 避免出現滾動
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    document.execCommand('copy');
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  document.body.removeChild(textArea);
+}
+
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const email = 'service@tooxen.app';
+    
+    const originalText = copyEmailBtn.dataset.originalText || copyEmailBtn.innerText;
+    copyEmailBtn.dataset.originalText = originalText;
+    
+    const showCopiedFeedback = () => {
+      copyEmailBtn.innerText = '已複製！';
+      setTimeout(() => {
+        copyEmailBtn.innerText = originalText;
+      }, 2000);
+    };
+
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(email);
+      showCopiedFeedback();
+      return;
+    }
+    
+    navigator.clipboard.writeText(email).then(() => {
+      showCopiedFeedback();
+    }).catch(err => {
+      console.error('Clipboard API failed: ', err);
+      fallbackCopyTextToClipboard(email);
+      showCopiedFeedback();
+    });
+  });
+}
