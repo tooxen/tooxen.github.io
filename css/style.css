@@ -72,10 +72,14 @@ body {
 }
 
 .navbar-logo {
-  height: 28px;
-  width: auto;
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  flex-shrink: 0;
   object-fit: contain;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .navbar-brand:hover .navbar-logo {
