@@ -71,6 +71,17 @@ body {
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
+.navbar-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo {
+  transform: rotate(15deg) scale(1.1);
+}
+
 .navbar .nav-link:hover {
   color: var(--tx-yellow) !important;
   transform: translateY(-2px);
@@ -172,49 +183,81 @@ section {
 .service-card {
   background: var(--tx-gradient-yellow);
   border: none;
-  border-radius: 24px;
-  padding: 1.25rem 0.75rem !important;
+  border-radius: 28px;
+  padding: 1.5rem 1rem !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 1;
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+
+.service-card:focus-visible {
+  outline: 3px solid var(--tx-blue);
+  outline-offset: 4px;
 }
 
 .service-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
 }
 
 .service-card:hover {
-  transform: translateY(-15px) scale(1.05);
+  transform: translateY(-10px) scale(1.03);
 }
 
 .service-card:hover::before {
   opacity: 1;
 }
 
+.service-icon-box {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 0.75rem auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(47, 151, 212, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .service-icon {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
-  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover .service-icon-box {
+  background: #ffffff;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(29, 112, 184, 0.18);
 }
 
 .service-card:hover .service-icon {
-  transform: rotateY(180deg) scale(1.15) translateY(-10px);
+  transform: scale(1.05);
 }
-
 
 .service-card-title {
-  color: #46A0A6 !important;
+  color: #1A6C88 !important;
   font-size: 1.15rem;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0;
 }
+
 /* Cases - Fixed Carousel Layout */
 .carousel-item-wrapper {
   display: flex;
@@ -223,9 +266,10 @@ section {
 }
 
 @media (min-width: 768px) {
-  .service-card { padding: 2rem 1.5rem !important; }
-  .service-card-title { font-size: 1.5rem; }
-  .service-icon { width: 80px; height: 80px; }
+  .service-card { padding: 2.25rem 1.5rem !important; }
+  .service-card-title { font-size: 1.45rem; }
+  .service-icon-box { width: 92px; height: 92px; margin-bottom: 1rem; border-radius: 24px; }
+  .service-icon { width: 56px; height: 56px; }
   
   .carousel-item-wrapper {
     flex-direction: row;
@@ -234,6 +278,96 @@ section {
   .carousel-item-wrapper>div {
     flex: 1;
   }
+}
+
+/* Service Detail Modal - Brand Harmonized Theme */
+.modal-service-content {
+  background-color: var(--tx-ivory) !important;
+  border: 2px solid rgba(84, 146, 213, 0.25) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 25px 50px -12px rgba(44, 51, 56, 0.3) !important;
+}
+
+.modal-service-icon-box {
+  background: var(--tx-gradient-yellow) !important;
+  box-shadow: 0 6px 16px rgba(251, 230, 117, 0.4) !important;
+}
+
+.modal-badge-category {
+  background: rgba(84, 146, 213, 0.18) !important;
+  color: var(--tx-blue-dark) !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.modal-service-title {
+  color: var(--tx-blue-dark) !important;
+}
+
+.modal-service-tagline {
+  color: #3F474D !important;
+}
+
+.modal-highlight-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(84, 146, 213, 0.18) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(44, 51, 56, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(84, 146, 213, 0.15);
+}
+
+.modal-highlight-title {
+  color: var(--tx-blue-dark) !important;
+  font-weight: 700;
+}
+
+.modal-highlight-desc {
+  color: #555E65 !important;
+}
+
+.modal-service-info-box {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-left: 4px solid var(--tx-blue) !important;
+  border-radius: 14px !important;
+  border-top: 1px solid rgba(84, 146, 213, 0.15);
+  border-right: 1px solid rgba(84, 146, 213, 0.15);
+  border-bottom: 1px solid rgba(84, 146, 213, 0.15);
+}
+
+.modal-service-info-desc {
+  color: #434B52 !important;
+}
+
+.btn-modal-contact {
+  background: var(--tx-gradient-blue) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(84, 146, 213, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-modal-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(84, 146, 213, 0.45);
+  color: #ffffff !important;
+}
+
+.btn-modal-close {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #555E65 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  font-weight: 600;
+}
+
+.btn-modal-close:hover {
+  background: #ffffff !important;
+  color: var(--tx-dark) !important;
 }
 
 .case-card {

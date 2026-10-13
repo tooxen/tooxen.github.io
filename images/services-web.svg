@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="#1D70B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 瀏覽器視窗外框 -->
+  <rect x="6" y="10" width="52" height="44" rx="8" />
+  <!-- 頂部工具列分隔線 -->
+  <line x1="6" y1="22" x2="58" y2="22" />
+  <!-- 三個簡潔圓點 -->
+  <circle cx="14" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="21" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="28" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <!-- 內部版面配置：左側圖片塊與右側排版線條 -->
+  <rect x="13" y="28" width="16" height="18" rx="3" stroke-width="2.5" />
+  <line x1="35" y1="31" x2="51" y2="31" stroke-width="2.5" />
+  <line x1="35" y1="37" x2="48" y2="37" stroke-width="2.5" />
+  <line x1="35" y1="43" x2="45" y2="43" stroke-width="2.5" />
+</svg>

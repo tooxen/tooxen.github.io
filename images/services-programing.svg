@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="#1D70B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 程式碼終端/視窗外框 -->
+  <rect x="6" y="10" width="52" height="44" rx="8" />
+  <line x1="6" y1="22" x2="58" y2="22" />
+  <circle cx="14" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="21" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="28" cy="16" r="2" fill="#1D70B8" stroke="none" />
+  <!-- 代碼括號與游標：< / > -->
+  <polyline points="20,32 15,37 20,42" stroke-width="3" />
+  <line x1="26" y1="44" x2="31" y2="30" stroke-width="3" />
+  <polyline points="37,32 42,37 37,42" stroke-width="3" />
+  <!-- 閃爍游標橫線/點 -->
+  <line x1="46" y1="42" x2="49" y2="42" stroke-width="3" />
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="#1D70B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 伺服器主機 1 (上層) -->
+  <rect x="10" y="10" width="44" height="18" rx="5" />
+  <circle cx="18" cy="19" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="25" cy="19" r="2" fill="#1D70B8" stroke="none" />
+  <line x1="36" y1="19" x2="46" y2="19" stroke-width="2.5" />
+
+  <!-- 伺服器主機 2 (下層) -->
+  <rect x="10" y="36" width="44" height="18" rx="5" />
+  <circle cx="18" cy="45" r="2" fill="#1D70B8" stroke="none" />
+  <circle cx="25" cy="45" r="2" fill="#1D70B8" stroke="none" />
+  <line x1="36" y1="45" x2="46" y2="45" stroke-width="2.5" />
+
+  <!-- 中間資料傳輸/系統互聯節點 -->
+  <line x1="22" y1="28" x2="22" y2="36" stroke-width="2.5" />
+  <line x1="42" y1="28" x2="42" y2="36" stroke-width="2.5" />
+</svg>
